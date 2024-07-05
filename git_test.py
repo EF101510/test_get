@@ -19,3 +19,11 @@ def open_hi (hihi:int):
 
 open_hi(9)
 
+star =""
+def print_star(num:int):
+    global star
+    for i in range(num):
+        star += "*"
+        print(star)
+
+print_star(6)
