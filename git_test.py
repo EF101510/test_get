@@ -27,3 +27,17 @@ def print_star(num:int):
         print(star)
 
 print_star(6)
+
+
+
+class Student:
+    def __init__(self, name, student_id, grade):
+        self.name = name
+        self.student_id = student_id
+        self.grade = grade
+
+    def student(self):#不太確定
+        return f"Student(name={self.name}, student_id={self.student_id}, grade={self.grade})"
+    
+student = Student("hihello", "664455", 3)
+print(student)
