@@ -102,7 +102,7 @@ class Bird(Animal):
     def fly(seif):
         print("I can fly.")
 
-class BirdPenguin(Bird):
+class Penguin(Bird):
     def fly(seif):
         print("I can't fly.")
 
