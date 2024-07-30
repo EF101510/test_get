@@ -30,14 +30,82 @@
 
 
 
-class Student:
-    def __init__(self, name, student_id, grade):
-        self.name = name
-        self.student_id = student_id
-        self.grade = grade
+# class Student:
+#     def __init__(self, name, student_id, grade):
+#         self.name = name
+#         self.student_id = student_id
+#         self.grade = grade
 
-    def student(self):#不太確定
-        return f"Student(name={self.name}, student_id={self.student_id}, grade={self.grade})"
+#     def student(self):#不太確定
+#         return f"Student(name={self.name}, student_id={self.student_id}, grade={self.grade})"
     
-student = Student("hihello", "664455", 3)
-print(student)
+# student = Student("hihello", "664455", 3)
+# print(student)
+
+
+# class Animal():
+#     def __init__(self, name):
+#         self.name = name
+#         print("Ok")
+
+
+# class Dog(Animal):
+
+
+#     def bark(self):
+#         print(f"{self.name} 說：汪汪！")
+
+# # 創建一隻狗
+# my_dog = Dog("小黃")
+# print(my_dog.name)  # 輸出：小黃
+# my_dog.bark()       # 輸出：小黃 說：汪汪！
+
+
+# class Animal():
+#     def speak(self):
+#         print("我是一個動物")
+
+# class Dog(Animal):
+#     def speak(self):
+#         print("汪汪！")
+
+# class Cat(Animal):
+#     def speak(self):
+#         print("喵喵！")
+
+# # 讓動物們說話
+# animal = Animal()
+# dog = Dog()
+# cat = Cat()
+
+# animal.speak()  # 輸出：我是一個動物
+# dog.speak()     # 輸出：汪汪！
+# cat.speak()     # 輸出：喵喵！
+
+
+class Animal():
+    def __init__(self, name):
+        self.name = name
+    def foo(self):
+        print("foo")
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)  # 呼叫父類別的 __init__ 方法
+        self.breed = breed
+    
+    def foo(self):
+        super().foo()
+        print("bar")
+
+class Bird(Animal):
+    def fly(seif):
+        print("I can fly.")
+
+class BirdPenguin(Bird):
+    def fly(seif):
+        print("I can't fly.")
+
+my_dog = Dog("小黃", "柴犬")
+my_dog.foo()
+print(f"{my_dog.name} 是一隻 {my_dog.breed}")  # 輸出：小黃 是一隻 柴犬
