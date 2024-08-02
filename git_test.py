@@ -83,6 +83,8 @@
 # cat.speak()     # 輸出：喵喵！
 
 
+
+
 class Animal():
     def __init__(self, name):
         self.name = name
@@ -99,13 +101,48 @@ class Dog(Animal):
         print("bar")
 
 class Bird(Animal):
-    def fly(seif):
+    def fly(self):
         print("I can fly.")
 
 class Penguin(Bird):
-    def fly(seif):
+    def fly(self):
         print("I can't fly.")
 
 my_dog = Dog("小黃", "柴犬")
-my_dog.foo()
-print(f"{my_dog.name} 是一隻 {my_dog.breed}")  # 輸出：小黃 是一隻 柴犬
+my_bird = Bird("鳥")
+
+my_penguin=Penguin("企鵝")
+my_penguin.fly()
+
+
+
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+    @abstractmethod
+    def stop_engine(self):
+        pass
+
+class Car(Vehicle):
+    def start_engine(self):
+        print("車子已發動")
+
+    def stop_engine(self):
+        print("車子已熄火")
+
+class Ship(Vehicle):
+    def start_engine(self):
+        print("船已發動")
+
+    def stop_engine(self):
+        print("船已熄火")
+
+
+car = Car()
+car.start_engine()
+car.stop_engine()
