@@ -143,6 +143,22 @@ class Ship(Vehicle):
         print("船已熄火")
 
 
+class Motorcycle(Vehicle):
+    def start_engine(self):
+        print("摩托車發動")
+
+    def stop_engine(self):
+        print("摩托車已熄火")
+
+
+class Garage(Vehicle):
+    def start_engine(self):
+        print("全部發動")
+
+    def stop_engine(self):
+        print("全部已熄火")
+
+
 car = Car()
 car.start_engine()
 car.stop_engine()
